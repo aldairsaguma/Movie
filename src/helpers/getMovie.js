@@ -5,12 +5,21 @@ export const getMovie = async() => {
     const data = await res.json();
     const { results } = data;
 
-    results.map( req =>  {
+    const movies = results.map( req =>  {
+
+        const {id, title, overview, release_date, poster_path, vote_average, original_language} = req;
+
         return{
-            id : req.id
+            id,
+            title,
+            overview,
+            release_date,
+            poster_path,
+            vote_average,
+            original_language 
         }
     });
 
-    return results;
+    return movies;
 
 }

@@ -4,8 +4,27 @@
     gap: 20px;
     .element{
         .movie{
+            display: grid;
             width: 90%;
             margin:  auto;
+            border: solid $black 2px;
+            .box-poster_path{
+                grid-column: 1/2;
+                text-align: center;
+                position: relative;
+                .poster_path{
+                    width: 100%;
+                    padding: 15px;
+                    box-sizing: border-box;
+                }
+                .vote_average{
+                    position: absolute;
+                    right: auto;
+                    left: 100%;
+                    bottom: 100%;
+                    top: auto;
+                }
+            }
         }
     }
 }

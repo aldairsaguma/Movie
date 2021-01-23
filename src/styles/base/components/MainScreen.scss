@@ -6,16 +6,18 @@
 
     .movie{
         width: 90%;
-        margin:  auto;
         border: solid $black 2px;
         
         /** Sub grid **/
         display: grid;
         grid-row: span 3;
+        // row
         grid-template-rows: auto auto 1fr;
         grid-template-rows: subgrid;    
+        // column
         grid-column: span 1;
         grid-template-columns: subgrid;
+        // min-height: 100%;
         .box-poster_path{
             grid-column: 1/2;
             text-align: center;
